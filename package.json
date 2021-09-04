@@ -5,11 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
     "build": "cd frontend && npm run build",
     "install-frontend": "cd frontend && npm install",
-    "heroku-postbuild": "npm run install-frontend && npm run build",
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
-    
+    "heroku-postbuild": "npm run install-frontend && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +22,6 @@
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
     "nodemon": "^2.0.10"
-    
   },
   "devDependencies": {
     "eslint": "^7.30.0",
