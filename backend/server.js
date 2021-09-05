@@ -23,20 +23,23 @@ app.use('/api/orders', orderRouter);
 app.get('/api/config/paypal', (req, res) =>{
     res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
-app.get('/',(req, res) => {
-    res.send('Server is ready');
-});
+//app.get('/',(req, res) => {
+ //   res.send('Server is ready');
+//});
 
 app.use((err, req, res, next) => {
     res.status(500).send({message: err.message});
 });
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('/frontend/build'));
+    app.use(express.static('frontend/build'));
 }
-
-
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+
+httpServer.listen(port, () => {
     console.log(`Server at http://localhost:${port}`);
 });
+
+//app.listen(port, () => {
+ //   console.log(`Server at http://localhost:${port}`);
+//});
