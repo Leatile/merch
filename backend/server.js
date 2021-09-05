@@ -38,13 +38,7 @@ if(process.env.NODE_ENV === 'production'){
 
 const port = process.env.PORT || 5000;
 
-httpServer.listen(port, () => {
-    console.log(`Server at http://localhost:${port}`);
-})
-
-
-
-//app.listen(port, () => {
-  //console.log(`Server at http://localhost:${port}`);
-//});
+app.listen(port, () => {
+  console.log(`Server at http://localhost:${port}`);
+});
 
