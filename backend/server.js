@@ -25,18 +25,14 @@ app.get('/api/config/paypal', (req, res) =>{
 });
 
 //app.get('/',(req, res) => {
-//   res.send('Server is ready');
+  //res.send('Server is ready');
 //});
 
 app.use((err, req, res, next) => {
     res.status(500).send({message: err.message});
 });
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('frontend/build'));
-}
-
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000; 
 
 app.listen(port, () => {
   console.log(`Server at http://localhost:${port}`);
