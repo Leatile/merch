@@ -8,6 +8,10 @@ Online shopping website, initially named it **Merch** but later changed it to **
 
 Allows user to register and sign in, add items to cart, pay using card or paypal, edit user profile, view order history and also has an admin view only visible to administrators.
 
+## Website
+
+https://sneakerbar.herokuapp.com
+
 ## Technologies
 
 - HTML5, CSS3 and Javascript
