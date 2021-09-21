@@ -23,21 +23,25 @@ https://sneakerbar.herokuapp.com
 
 ## Run Locally
 
-$ git clone git@github.com:Leatile/merch
+ git clone git@github.com:Leatile/merch
 
-$ cd merch
+ cd merch
 
 ## Setup MongoDB
 
 - Local MongoDB
   - Install MongoDB
   - Create .env file in root folder and set MONGODB_URL=mongodb://localhost/merch
+- Atlas MongoDB
+  - Create a database at Atlas MongoDB
+  - Create .env file in root folder and set
+ MONGODB_URL=mongodb+srv://your-db-connection
 
 ## Run Backend
+-
+ npm install
 
-$ npm install
-
-$ npm start
+ npm start
 
 <br/>
 
@@ -45,8 +49,8 @@ $ npm start
 
 ### ~open new terminal
 
-$ cd frontend
+ cd frontend
 
-$ npm install
+ npm install
 
-$ npm start
+ npm start
